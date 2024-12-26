@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --dark-violet:hsl(270, 9%, 17%);
+    --grayish-blue:hsl(216, 30%, 68%);
+    --vary-dark-violet: hsl(271, 19%, 30%);
+    --dark-grayish-violet: hsl(273, 4%, 51%);
+    --light-gray: hsl(0, 0%, 98%);
+}
+
+body{
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+    background-color: rgb(255, 253, 250);
+}
+
+/* constant tools */
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.5;
+}
+
+
+/* Utility classes */
+.container{
+    max-width: 1100px;
+    padding: 0 2rem;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.line{
+    width: 140px;
+    height: 1px;
+}
+
+.btn-priamry{
+    display: inline-block;
+    padding: 8px 24px;
+    font-size: 14px;
+    color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+.btn-priamry:hover{
+    background-color: var(--light-gray);
+    color: var(--vary-dark-violet);
+    font-weight: 600;
+}
+
+
+/* ======= header start ======= */
+#navabr{
+    background-color: var(--light-gray);
+    position: relative;
+}
+
+#navabr nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+#navabr nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#navabr nav ul li a{
+    margin-left: 20px;
+    font-weight: 700;
+    color: var(--dark-grayish-violet);
+    transition: all 0.3s ease;
+}
+#navabr nav ul li a:hover{
+    color: var(--dark-violet);
+}
+
+#navabr nav ul li:last-child a{
+    padding: 8px 20px;
+    border: 1px solid var(--dark-violet);
+    color: var(--dark-violet);
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+#navabr nav ul li:last-child a:hover{
+    background-color: var(--dark-violet);
+    color: var(--light-gray);
+}
+
+.humburger{
+    cursor: pointer;
+    right: 2rem;
+    position: absolute;
+    display: none;
+}
+/* ======= header end ======= */
+
+/* ======= Home start ======= */
+#home{
+    background-color: var(--vary-dark-violet);
+    height: 75vh;
+    position: relative;
+}
+
+.line{
+    background-color: var(--light-gray);
+}
+
+#home .home-content{
+    display: flex;
+    padding-top: 4rem;
+    gap: 3rem;
+    color: var(--light-gray);
+    position: relative;
+}
+
+#home .home-content::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 76%;
+    width: 30%;
+    height: 75%;
+    background: url(imge/bg-pattern-intro-right-desktop.svg)no-repeat;
+}
+
+#home::after{
+    position: absolute;
+    content: "";
+    top: 15rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imge/bg-pattern-intro-left-desktop.svg)no-repeat;
+    z-index: -1;
+}
+
+#home .home-content h1{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "DM Serif Display", serif;
+    margin-top: 1rem;
+    max-width: 400px;
+}
+
+#home .home-content p{
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+#home .home-content img{
+    height: 400px;
+    margin-top: 3rem;
+}
+/* ======= Home end ======= */
+
+/* ======= How-We-Work start ======= */
+#How-We-Work{
+    padding: 10rem 0;
+}
+
+#How-We-Work .line{
+    background-color: var(--dark-grayish-violet);
+} 
+
+#How-We-Work h2{
+    font-size: 50px;
+    font-family: "DM Serif Display", serif;
+    margin: 2rem 0;
+}
+
+#How-We-Work .row{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+#How-We-Work .row .item h3{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "DM Serif Display", serif;
+    margin: 1rem 0;
+}
+/* ======= How-We-Work end ======= */
+
+/* ======= card start ======= */
+#card{
+    padding: 2rem 0;
+    color: var(--light-gray);
+}
+
+#card .row{
+    background: var(--vary-dark-violet);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    text-transform: capitalize;
+}
+
+#card .row::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 75%;
+    width: 25%;
+    height: 100%;
+    background: url(imge/bg-pattern-intro-right-desktop.svg)no-repeat;
+    z-index: -1;
+}
+
+#card .row h2{
+    margin: 20px 0;
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+/* ======= card end ======= */
+
+/* ======= footer start ======= */
+#footer{
+    padding: 2rem 0;
+    background-color: rgba(241, 242, 242, 0.649);
+}
+#footer hr{
+    margin: 20px 0;
+}
+
+#footer .logo-social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .logo-social img{
+    margin: 3px;
+}
+
+#footer .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    line-height: 1.5;
+}
+
+#footer .row h4{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+#footer .row .col ul li{
+    transition: all 0.4s ease-in-out;
+    color: var(--vary-dark-violet);
+}
+#footer .row .col ul li:hover{
+    transform: translateX(5px);
+}
+/* ======= footer end ======= */
+
+/* ======= Responsive start ======= */
+/* ===== tablet view start ===== */
+@media(max-width:1000px){
+    .line{
+        display: none;
+    }
+
+    /* ======= Home ======= */
+    #home{
+        height: auto;
+    }
+
+    #home .container{
+        padding: 0;
+    }
+
+    #home .home-content{
+        flex-direction: column-reverse;
+        gap: 0;
+        padding-top: 0;
+    }
+
+    #home .home-content .content-left{
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+
+    #home .home-content h1,
+    #home .home-content p{
+        max-width: none ;
+        margin-top: 0;
+    }
+
+    #home .home-content img{
+        margin-top: 0;
+    }
+
+    /* ======= How-We-Work ======= */
+    #How-We-Work{
+        padding: 5rem 0;
+        text-align: center;
+
+    }
+
+    #How-We-Work .line{
+        margin: auto;
+        display: block;
+    } 
+
+    #How-We-Work .row{
+        grid-template-columns: 1fr;
+    }
+
+    /* ======= card======= */
+    #card{
+        margin: auto
+    }
+
+    #card .row h2{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #card .row{
+        flex-direction: column;
+    }
+
+    /* ======= footer ======= */
+    #footer .row{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ===== tablet view end ===== */
+/* ======= Responsive end ======= */
+
+
+/* ======= mobile view start ======= */
+/* ===== Responsive start ===== */
+@media(max-width:700px){
+
+    .humburger{
+        display: block;
+    }
+
+    .humburger .bars, .humburger .x-mark{
+        display: none;
+    }
+
+    .humburger .bars.active, .humburger .x-mark.active{
+        display: block;
+    }
+
+    #navabr nav ul{
+        position: absolute;
+        content:"";
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+        z-index: 1;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: var(--dark-violet);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    #navabr nav ul.active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #navabr nav ul li a{
+        display: inline-block;
+        margin: 15px 0;  
+        color: var(--light-gray);
+    }
+
+    #navabr nav ul li a:hover{
+        color: var(--light-gray);
+    }
+
+    #navabr nav ul li:last-child a{
+        color: var(--light-gray);
+        border: 1px solid var(--light-gray);
+    }
+    
+    #home .home-content h1,
+    #How-We-Work h2{
+        font-size: 45px;
+    }
+    #footer .logo-social{
+        flex-direction: column;
+    }
+
+    #footer .logo-social img{
+        margin-bottom: 20px;
+    }
+
+    #footer .row{
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+/* ===== mobile view end ===== */
+/* ======= Responsive end ======= */
